@@ -1,0 +1,30 @@
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8080
+  port: 8888
+  servlet:
+    # 应用的访问路径
+    context-path: /
+
+spring:
+  # 邮箱配置
+  mail:
+    # POP3服务器地址为“pop.qq.com”，SMTP服务器地址为“smtp.qq.com”
+    # 注：
+    # 1、SMTP服务器需要身份验证。
+    # 2、如果是设置POP3和SMTP的SSL加密方式，则端口如下：
+    #    1）POP3服务器（端口995）；
+    #    2）SMTP服务器（端口465或587）。
+    host: smtp.qq.com
+    # qq邮箱账号
+    username: aqbujianle@qq.com
+    # qq邮箱授权密码
+    password: ryvtsneeukqjbbcc
+    # 端口号
+    port: 465
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true #一定要开启ssl,不然会503 验证失败的
